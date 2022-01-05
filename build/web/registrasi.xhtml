@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Furniture Shop</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </h:head>
+    <h:body>
+         <table border="0" align="top" width="100%" style="position: relative; height: 80px; background-color: #754c2d">
+            <tr>
+                <td align="center">
+                    <p style="font-size: 38pt; color: #ffffff; font-family: Centaur">ONLINE FURNITURE SHOP</p>
+                </td>
+            </tr>
+        </table>
+        <table border="1" align="top" width="100%" style="height: 421px; background-color: #754c2d">
+            <td width="85%" valign="top" bgcolor="white" height="260px">
+                <div class="row">
+                <div class="col-xs-12 col-xs-updated">
+                    <center>
+                        <b:container style="width: 40%;">
+                            <h:form styleClass="form-signin" prependId="false">
+                                <br/>
+                                <h:outputLabel style="font-family: Centaur; font-size: 35px">Registrasi</h:outputLabel>
+                                <br/><br/>
+                                <table>
+                                    <tr>
+                                        <b:alert severity="success" rendered="#{tblUser.showalertregis}"><strong>Registrasi Berhasil</strong></b:alert>
+                                        <b:alert severity="danger" rendered="#{tblUser.showalertregisfail}" ><strong>Akun Sudah Ada</strong></b:alert>
+                                       <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Username</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" placeholder="Username" value="#{tblUser.username}"/></td>
+                                    </tr>
+                                 
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Password</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" placeholder="Password" value="#{tblUser.password}" type="password"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Role</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" placeholder="Role" value="#{tblUser.role}"/></td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <td colspan="3">
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="SAVE"
+                                                                 icon="glyphicon glyphicon-ok" action="#{tblUser.add()}"/>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <b:commandButton look="primary btn-success" value="RESET"
+                                                                 icon="glyphicon glyphicon-remove" type="reset"/>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/><br/>
+                                <p>Already have an account? <a href="index.xhtml">Login</a>.</p>
+                            </h:form>
+                        </b:container>
+                    </center>
+                </div>
+            </div>
+            </td>
+        </table>
+        <table border="0" align="top" width="100%" style="height: 40px; background-color: #754c2d">
+            <tr>
+                <td align="center">
+                    <p style="font-size: 10pt; color: #e68a19; font-family: monospace">yf.co.id <br/> Gedung Equity Tower lantai 27, SCBD Lot 9,
+                    Jl. Jenderal Sudirman Kav.52-53<br/> Telp: (+62)12345678 | Fax: (021)123-4567 <br/> E-Mail: care@yourfurniture.co.id </p>
+                <p><a href="http://wa.me/08XXXXXXXXXX" target="_blank" title="Customer Service"> <img src="image/wa.png" border="0" width="45" height="45"/></a></p>
+                </td>
+                <a href="Template.xhtml"></a>
+            </tr>
+        </table>
+    </h:body>
+</html>
+

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>CCIT FTUI</title>
+    </h:head>
+    <h:body>
+         <table border="0" align="top" width="100%" style="position: relative; height: 80px; background-color: chartreuse">
+            <tr>
+                <td align="center">
+                    <p style="font-size: 38pt; color: #ffffff; font-family: Centaur">CCIT FTUI</p>
+                </td>
+            </tr>
+        </table>
+        <table border="1" align="top" width="100%" style="height: 421px; background-color: chartreuse">
+            <td style="font-size: larger" align="center">
+                <ui:include src="sidebar.xhtml" />
+            </td>
+            <td width="85%" valign="top" bgcolor="white" height="260px">
+                <br></br><br></br>
+                <ui:insert name="body" />Area yang bisa di Edit
+                <br></br><br></br><br></br><br></br><br></br><br></br>
+                <ui:insert name="extended" />Area yang bisa di Edit juga
+            </td>
+        </table>
+        <table border="0" align="top" width="100%" style="height: 40px; background-color: chartreuse">
+            <tr>
+                <td align="center"><h3>ccit.eng.id</h3>
+                </td>
+            </tr>
+        </table>
+    </h:body>
+</html>
+

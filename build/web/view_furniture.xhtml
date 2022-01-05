@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+    </h:body><?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>CCIT FTUI</title>
+    </h:head>
+    <h:body>
+        <div style="background-color: palegreen;">
+            <ui:decorate template="Template.xhtml">
+                <ui:define name="body">
+                                <div class="row">
+                <div class="col-xs-12 col-xs-updated">
+                    <center>
+                        <b:container style="width: 40%; background-color: #dcffbd;">
+                            <h:form styleClass="form-signin" prependId="false">
+                                <br/>
+                                <h:outputLabel style="font-family: Centaur; font-size: 35px">Data Pelanggan</h:outputLabel>
+                                <br/><br/>
+                                <table>
+                                    <tr>
+                                        <b:alert severity="success" rendered="#{tblPelanggan.showalertubahsuccess}"><strong>Data Berhasil Diubah</strong></b:alert>
+                                        <b:alert severity="success" rendered="#{tblPelanggan.showalertdeletesuccess}"><strong>Data Berhasil Dihapus</strong></b:alert>
+                                        <b:alert severity="danger" rendered="#{tblPelanggan.showalertfail}" ><strong>Data Tidak Ditemukan!</strong></b:alert>
+                                        <td>
+                                            <h:outputLabel style="font-family: Centaur; font-size: 24px">ID Pelanggan</h:outputLabel>
+                                        </td>
+                                        <td width="5%"></td>
+                                        <td>
+                                            <b:inputText style="font-family: Centaur; font-size: 18px" placeholder="Masukkan ID Dicari"
+                                                         value="#{tblPelanggan.idPelanggan}"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="Cari Data Pelanggan" icon="search"
+                                                                 action="#{tblPelanggan.getbyid}"/>
+                                            </center>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Nama</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.nama}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Alamat</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.alamat}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">E-Mail</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.email}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Telepon</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.noTelp}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="UBAH"
+                                                                 icon="edit" action="#{tblPelanggan.update}"/>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <b:commandButton look="primary btn-success" value="HAPUS"
+                                                                 icon="edit" action="#{tblPelanggan.delete}"/>
+                                            </center>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h:form>
+                        </b:container>
+                    </center>
+                </div>
+            </div>
+                </ui:define>
+            </ui:decorate>
+        </div>
+    </h:body>
+</html>
+
+
+</html>
+
